@@ -1,4 +1,4 @@
-package com.mycompany.salextaxes;
+package com.mycompany.salestaxes;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,9 +11,9 @@ import static org.junit.Assert.*;
  *
  * @author a.grimaldi
  */
-public class SalexTaxesTest {
+public class SalesTaxesTest {
     
-    public SalexTaxesTest() {
+    public SalesTaxesTest() {
     }
     
     @BeforeClass
