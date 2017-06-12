@@ -1,2 +1,4 @@
 language: java
-script: mvn -f SalesTaxes/pom.xml clean install 
+script: 
+- mvn -f SalesTaxes/pom.xml clean install 
+- mvn javadoc:javadoc
