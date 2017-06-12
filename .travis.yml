@@ -1,1 +1,2 @@
-mvn test -B
+language: java
+script: mvn -f SalesTaxes/pom.xml clean install 
