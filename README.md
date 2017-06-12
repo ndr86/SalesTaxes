@@ -1,2 +1,2 @@
-# SalexTaxes
-Salex Taxes
+# SalesTaxes
+Sales Taxes
