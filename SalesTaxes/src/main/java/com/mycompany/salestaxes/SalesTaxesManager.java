@@ -6,14 +6,21 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
+ * The sales taxes manager calculate and print the all items on a receipt
  *
  * @author a.grimaldi
  */
 public class SalesTaxesManager {
 
+    /**
+     * Calculate the tax amount and due price for each item
+     *
+     * @param items The list of items
+     * @return The receipt with all items
+     */
     public Receipt calculateReceiptAmount(List<Item> items) {
 
-        Receipt receiptDTO = new Receipt(items);
+        Receipt receipt = new Receipt(items);
 
         // Calculate taxes on items
         for (Item item : items) {
@@ -41,28 +48,33 @@ public class SalesTaxesManager {
 
             item.setTax(BigDecimal.valueOf(roundedTax));
 
-            receiptDTO.setSalesTaxes(receiptDTO.getSalesTaxes().add(item.getTax()));
+            receipt.setSalesTaxes(receipt.getSalesTaxes().add(item.getTax()));
 
             item.setDuePrice(item.getPrice().add(item.getTax()));
 
-            receiptDTO.setTotalAmount(receiptDTO.getTotalAmount().add(item.getDuePrice()));
+            receipt.setTotalAmount(receipt.getTotalAmount().add(item.getDuePrice()));
         }
 
-        return receiptDTO;
+        return receipt;
     }
 
-    public void printReceipt(Receipt receiptDTO) {
+    /**
+     * Print on standard output all items contained in the receipt
+     *
+     * @param receipt The receipt to print
+     */
+    public void printReceipt(Receipt receipt) {
 
-        if (receiptDTO != null
-                && receiptDTO.getItems() != null
-                && !receiptDTO.getItems().isEmpty()) {
+        if (receipt != null
+                && receipt.getItems() != null
+                && !receipt.getItems().isEmpty()) {
 
-            for (Item item : receiptDTO.getItems()) {
+            for (Item item : receipt.getItems()) {
                 System.out.println(item.getQuantity() + " " + item.getDescription() + ": " + String.format("%.2f", item.getDuePrice()));
             }
 
-            System.out.println("Sales Taxes: " + String.format("%.2f", receiptDTO.getSalesTaxes()));
-            System.out.println("Total: " + String.format("%.2f", receiptDTO.getTotalAmount()));
+            System.out.println("Sales Taxes: " + String.format("%.2f", receipt.getSalesTaxes()));
+            System.out.println("Total: " + String.format("%.2f", receipt.getTotalAmount()));
         }
     }
 

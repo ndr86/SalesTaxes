@@ -36,6 +36,9 @@ public class SalesTaxesManagerTest {
         salesTaxesManager = new SalesTaxesManager();
     }
 
+    /**
+     * TEST CASE: Input 1
+     */
     @Test
     public void input1() {
 
@@ -68,6 +71,9 @@ public class SalesTaxesManagerTest {
         salesTaxesManager.printReceipt(receipt);
     }
 
+    /**
+     * TEST CASE: Input 2
+     */
     @Test
     public void input2() {
 
@@ -95,6 +101,9 @@ public class SalesTaxesManagerTest {
         salesTaxesManager.printReceipt(receipt);
     }
 
+    /**
+     * TEST CASE: Input 3
+     */
     @Test
     public void input3() {
 
