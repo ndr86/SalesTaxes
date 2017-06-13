@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
+ * This class contains all information to print of a receipt
  *
  * @author a.grimaldi
  */

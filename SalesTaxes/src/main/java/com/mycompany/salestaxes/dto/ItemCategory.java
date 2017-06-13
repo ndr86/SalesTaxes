@@ -1,6 +1,7 @@
 package com.mycompany.salestaxes.dto;
 
 /**
+ * This class represents a possible category of a good
  *
  * @author a.grimaldi
  */

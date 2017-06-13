@@ -3,6 +3,7 @@ package com.mycompany.salestaxes.dto;
 import java.math.BigDecimal;
 
 /**
+ * This class contains all attribute of a possible taxable "good"
  *
  * @author a.grimaldi
  */
