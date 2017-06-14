@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -76,6 +77,8 @@ public class SalesTaxesManagerTest {
 
         Receipt receipt = salesTaxesManager.calculateReceiptAmount(items);
 
+        Assert.assertEquals(receipt.getTotalAmount(), BigDecimal.valueOf(29.83));
+
         System.out.println("Output 1:");
         salesTaxesManager.printReceipt(receipt);
     }
@@ -112,6 +115,8 @@ public class SalesTaxesManagerTest {
         items.add(item);
 
         Receipt receipt = salesTaxesManager.calculateReceiptAmount(items);
+
+        Assert.assertEquals(receipt.getTotalAmount(), BigDecimal.valueOf(65.15));
 
         System.out.println("Output 2:");
         salesTaxesManager.printReceipt(receipt);
@@ -166,6 +171,8 @@ public class SalesTaxesManagerTest {
         items.add(item);
 
         Receipt receipt = salesTaxesManager.calculateReceiptAmount(items);
+
+        Assert.assertEquals(receipt.getTotalAmount(), BigDecimal.valueOf(74.68));
 
         System.out.println("Output 3:");
         salesTaxesManager.printReceipt(receipt);
