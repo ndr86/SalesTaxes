@@ -48,11 +48,12 @@
                         <phase>site</phase>
                         <goals>
                             <goal>aggregate</goal>
+                            <goal>test-aggregate</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
-
+    
 </project>
