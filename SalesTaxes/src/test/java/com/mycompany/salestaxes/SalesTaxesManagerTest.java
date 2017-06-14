@@ -46,6 +46,7 @@ public class SalesTaxesManagerTest {
 
         Item item = new Item();
         item.setQuantity(1);
+        item.setCode("xxx");
         item.setDescription("book");
         item.setPrice(BigDecimal.valueOf(12.49));
         item.setCategory(categories.get("1"));
@@ -53,6 +54,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("yyy");
         item.setDescription("music CD");
         item.setPrice(BigDecimal.valueOf(14.99));
         item.setCategory(categories.get("4"));
@@ -60,6 +62,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("zzz");
         item.setDescription("chocolate bar");
         item.setPrice(BigDecimal.valueOf(0.85));
         item.setCategory(categories.get("2"));
@@ -81,6 +84,7 @@ public class SalesTaxesManagerTest {
 
         Item item = new Item();
         item.setQuantity(1);
+        item.setCode("xxx");
         item.setDescription("imported box of chocolates");
         item.setImported(true);
         item.setPrice(BigDecimal.valueOf(10.00));
@@ -89,6 +93,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("yyy");
         item.setDescription("imported bottle of perfume");
         item.setImported(true);
         item.setPrice(BigDecimal.valueOf(47.50));
@@ -111,6 +116,7 @@ public class SalesTaxesManagerTest {
 
         Item item = new Item();
         item.setQuantity(1);
+        item.setCode("xxx");
         item.setDescription("imported bottle of perfume");
         item.setImported(true);
         item.setPrice(BigDecimal.valueOf(27.99));
@@ -119,6 +125,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("yyy");
         item.setDescription("bottle of perfume");
         item.setPrice(BigDecimal.valueOf(18.99));
         item.setCategory(categories.get("4"));
@@ -126,6 +133,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("zzz");
         item.setDescription("packet of headache pills");
         item.setPrice(BigDecimal.valueOf(9.75));
         item.setCategory(categories.get("3"));
@@ -133,6 +141,7 @@ public class SalesTaxesManagerTest {
 
         item = new Item();
         item.setQuantity(1);
+        item.setCode("vvv");
         item.setDescription("box of imported chocolates");
         item.setImported(true);
         item.setPrice(BigDecimal.valueOf(11.25));
